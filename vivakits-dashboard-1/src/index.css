@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: #fff;
+    --foreground: #090909;
+    --primary: #1f2937;
+    --primary-foreground: #fafaf9;
+    --primary-light: #ebf0ff;
+    --secondary: #3b82f6;
+    --secondary-foreground: #fafaf9;
+    --secondary-light: #f5eef8;
+    --accent: #f97316;
+    --accent-foreground: #fafaf9;
+    --accent-light: #fef1e8;
+    --success: #45d483;
+    --success-foreground: #fafaf9;
+    --success-light: #ecfbf3;
+    --warning: #fab005;
+    --warning-foreground: #fafaf9;
+    --warning-light: #fff7e6;
+    --danger: #fa5252;
+    --danger-foreground: #fafaf9;
+    --danger-light: #ffeeee;
+    --neutral: #e4e4e7;
+    --muted: #f4f4f5;
+    --placeholder: #00000066;
+    --black: #262626;
+    --ring: #3366ff;
+    --divider: #00000066;
+    --disabled: #f2f2f2;
+    --radius: 0.5rem;
+  }
+}
+
+.time-picker {
+  width: 100%;
+}
