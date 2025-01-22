@@ -1,0 +1,41 @@
+name: Update Vivakits Version
+
+on:
+  push:
+    branches:
+      - main  # or your desired branch
+    paths:
+      - 'scripts/update-vivakits-version.js' # Run the workflow when the version update script is modified
+
+jobs:
+  update-version:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18' # You can change this to your preferred Node.js version
+
+      - name: Install dependencies
+        run: npm install # or yarn install if you're using Yarn
+
+      - name: Run the version update script
+        run: node ./scripts/update-vivakits-version.js
+
+      - name: Stage changes
+        run: git add . # Stage all changes
+
+      - name: Commit changes
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git commit -m "Vivakits version updated"
+
+      - name: Push changes
+        run: git push origin main # or your desired branch
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
