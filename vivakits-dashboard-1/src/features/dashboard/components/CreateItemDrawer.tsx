@@ -1,7 +1,7 @@
 import ReactDOM from 'react-dom';
 import { VKDrawer, VKFlex, VKTypography } from '@vivakits/react-components';
-import CrossIcon from '../assets/icons/cross.tsx';
 import { ReactNode } from 'react';
+import CrossIcon from '../../../assets/icons/cross';
 
 const CreateItemDrawer = ({
   isOpen,
@@ -11,6 +11,7 @@ const CreateItemDrawer = ({
   title,
 }: {
   isOpen: boolean;
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-function-type
   onClose: Function;
   children: ReactNode;
   size?: 'sm' | 'md' | 'lg' | 'xl';

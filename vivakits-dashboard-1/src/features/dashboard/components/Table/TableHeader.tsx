@@ -14,8 +14,8 @@ import {
   VKSwitch,
   VKTimePicker,
 } from '@vivakits/react-components';
-import CreateItemDrawer from '../CreateItemDrawer';
 import { useState } from 'react';
+import CreateItemDrawer from '../CreateItemDrawer';
 
 export const TableHeader = () => {
   const [openDrawer, setOpenDrawer] = useState(false);
@@ -62,6 +62,7 @@ export const TableHeader = () => {
                 { label: 'Male', value: 'male' },
                 { label: 'Female', value: 'female' },
               ]}
+              // eslint-disable-next-line @typescript-eslint/no-explicit-any
               onChange={(option) => setValue(option as any)}
               value={value}
             />
@@ -81,6 +82,7 @@ export const TableHeader = () => {
               <VKTimePicker
                 size="md"
                 onChange={(time) => {
+                  // eslint-disable-next-line @typescript-eslint/no-explicit-any
                   setTime(time as any);
                 }}
                 classNames={{

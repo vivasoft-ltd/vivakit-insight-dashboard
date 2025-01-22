@@ -42,6 +42,7 @@ export const Table = () => {
       <TableHeader />
       <AsyncDatatable
         isLoading={loading}
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         columnDefinitions={dataTableColumns({ setOpenDeleteModal }) as any}
         dataSource={list.slice(0, 5)}
         isSelectableMulti

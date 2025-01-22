@@ -12,13 +12,14 @@ import {
   VKFlex,
   VKTypography,
 } from '@vivakits/react-components';
-import SearchIcon from '../assets/icons/search.tsx';
-import BellIcon from '../assets/icons/bell.tsx';
-import CrossIcon from '../assets/icons/cross.tsx';
-import NameIcon from '../assets/icons/name.tsx';
-import LogoutIcon from '../assets/icons/logout.tsx';
-import SupportIcon from '../assets/icons/support.tsx';
-import SettingIcon from '../assets/icons/setting.tsx';
+import CrossIcon from '../../../assets/icons/cross';
+import SearchIcon from '../../../assets/icons/search';
+import BellIcon from '../../../assets/icons/bell';
+import NameIcon from '../../../assets/icons/name';
+import SettingIcon from '../../../assets/icons/setting';
+import SupportIcon from '../../../assets/icons/support';
+import LogoutIcon from '../../../assets/icons/logout';
+
 
 const NavBar = () => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);

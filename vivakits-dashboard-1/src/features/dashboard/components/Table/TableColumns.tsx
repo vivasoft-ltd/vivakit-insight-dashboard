@@ -25,6 +25,7 @@ export const dataTableColumns = ({
   {
     title: 'User Name',
     dataIndex: 'username',
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     render: (d: any) => {
       return (
         <div className="flex w-full items-center justify-center">
