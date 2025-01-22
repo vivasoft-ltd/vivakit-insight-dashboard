@@ -16,7 +16,7 @@ async function updateVivakitsVersion() {
     console.log(`Current Version of ${packageName} is ${version}`);
     const args = process.argv.slice(2);
     if (!args.length) {
-      const dirPath = "./";
+      const dirPath = "../";
       const files = await fs.readdir(dirPath);
       for (const file of files) {
         const filePath = path.join(dirPath, file);
