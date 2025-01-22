@@ -18,16 +18,13 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18' # You can change this to your preferred Node.js version
-
-      - name: Install dependencies
-        run: npm install # or yarn install if you're using Yarn
+          node-version: '18'
 
       - name: Run the version update script
         run: node ./scripts/update-vivakits-version.js
 
       - name: Stage changes
-        run: git add . # Stage all changes
+        run: git add .
 
       - name: Commit changes
         run: |
@@ -36,6 +33,6 @@ jobs:
           git commit -m "Vivakits version updated"
 
       - name: Push changes
-        run: git push origin main # or your desired branch
+        run: git push origin main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
